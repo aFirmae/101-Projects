@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Artifika&display=swap');
+
+body {
+    background: linear-gradient(90deg, rgba(32, 30, 31, 1) 46%, rgba(52, 46, 49, 1) 100%);
+}
+
+.main {
+    display: flex;
+    justify-content: left;
+}
+
+#head-text {
+    color: white;
+    font-size: 3em;
+    font-family: 'Acme', sans-serif;
+    margin: 100px 0 70px 50px;
+    letter-spacing: 1.5px;
+    text-align: left;
+    cursor: default;
+}
+
+.typed {
+    width: 55%;
+    margin: 0 0 0 50px;
+    position: relative;
+}
+
+#typed {
+    width: 80%;
+    min-height: 45vh;
+    background-color: transparent;
+    border: lightslategray 1px solid;
+    border-radius: 5px;
+    color: white;
+    padding: 20px;
+    font-size: 1.2em;
+    font-family: 'Mulish', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    resize: none;
+    outline: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#typed::-webkit-scrollbar {
+    display: none;
+}
+
+#typed[data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: #999;
+    font-family: 'Mulish', sans-serif;
+}
+
+#char-limit {
+    position: absolute;
+    right: 16%;
+    ;
+    bottom: 3%;
+    color: #757575;
+    font-family: 'Mulish', sans-serif;
+}
+
+.search {
+    width: 45%;
+    margin: 7vh 0 0 0;
+}
+
+pre {
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Mulish', sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0 0 30px 0;
+}
+
+#search {
+    width: 80%;
+    background-color: transparent;
+    border: lightslategray 1px solid;
+    border-radius: 5px;
+    color: white;
+    padding: 20px;
+    font-size: 1.2em;
+    font-family: 'Mulish', sans-serif;
+    resize: none;
+    outline: none;
+}
+
+.tag-search {
+    position: relative;
+}
+
+#search-icon {
+    position: absolute;
+    top: 3.2px;
+    right: 21%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.highlighted {
+    color: black;
+    background-color: #dda142;
+    border-radius: 10px;
+    padding: 2px;
+    font-weight: 1000;
+}
+
+#content {
+    color: #999;
+    font-size: 1em;
+    font-family: Artifica;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    margin: 0 0 30px 20px;
+}
+
+.slide {
+    animation: pop 7.5s;
+}
+
+@keyframes pop {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        width: 100%;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-left: 3%;
+    }
+
+    #head-text {
+        font-size: 1.5em;
+        margin: 50px 0 30px 35px;
+    }
+
+    pre {
+        font-size: 1.2em;
+        margin-left: 2px;
+    }
+
+    .typed,
+    .search {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    #typed {
+        margin-top: 50px;
+    }
+
+    #search {
+        width: 91%;
+    }
+
+    #search-icon {
+        right: 10%;
+    }
+
+    #content {
+        position: absolute;
+        margin: 0 0 30px 15px;
+    }
+
+    #char-limit {
+        right: 13%;
+    }
+}
